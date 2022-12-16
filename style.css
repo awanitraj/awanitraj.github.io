@@ -288,28 +288,42 @@ html, body {
     margin: 0;
     padding: 0;
   }
-  
-  /* Make images and videos take up the full width of the screen */
-  img, video {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Use media queries to apply different styles for different screen sizes */
-  @media (max-width: 600px) {
-    /* Make the navigation menu into a dropdown on small screens */
-    nav ul {
-      display: none;
-    }
-    nav button {
-      display: block;
-    }
-  }
 
 @media (max-width: 768px) {
-  .container {
+  .form {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
+/* apply these styles to devices with a maximum width of 768px */
+@media (max-width: 768px) {
+  /* reduce the size of the header image */
+  .main-background {
+    width: 50%;
+  }
+
+  /* stack the navigation links vertically */
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+/* apply these styles to devices with a minimum width of 768px */
+@media (min-width: 768px) {
+  /* increase the size of the header image */
+  .form .class{
+    width: 75%;
+  }
+
+  /* keep the navigation links horizontal */
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 760px) {
+    .form h2
+      width: 75%;
+    }
+}
   
