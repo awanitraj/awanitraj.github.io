@@ -305,4 +305,11 @@ html, body {
       display: block;
     }
   }
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
   
